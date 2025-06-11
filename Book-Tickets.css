@@ -1,70 +1,71 @@
 .text {
-    color: #2dc275 !important;;
-    font-weight: bold !important
+  color: #2dc275 !important;
+  font-weight: bold !important;
 }
 
 body {
-    zoom: 0.9 !important;
+  zoom: 0.9 !important;
 }
 .text-gray {
-    color: rgb(166, 166, 176);
+  color: rgb(166, 166, 176);
 }
 
 .loading-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .loading {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #FF7F3E;
-    box-shadow:  rgba(0,0,0,0.24) 0px 3px 8px;
-    animation: animation 1s ease-in-out infinite;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ff7f3e;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  animation: animation 1s ease-in-out infinite;
 }
 
 .set_1 {
-    animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .set_2 {
-    animation-delay: 0.25s;
+  animation-delay: 0.25s;
 }
 
 .set_3 {
-    animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 @keyframes animation {
-    0% {
-        transform: scale(0.5);
-    }
-    50% {
-        transform:  scale(1);
-    }
-    100% {
-        transform: scale(0.5);
-    }
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
 }
 .bg-pink {
-    color: rgb(255, 66, 79);
-    background-color: rgb(255, 184, 188);
-    border-radius: 12px;
-    padding: 4px 8px;
-    width: max-content;
+  color: rgb(255, 66, 79);
+  background-color: rgb(255, 184, 188);
+  border-radius: 12px;
+  padding: 4px 8px;
+  width: max-content;
 }
 .row-default {
-    border-bottom: 1px dashed rgb(128, 128, 137);
+  border-bottom: 1px dashed rgb(128, 128, 137);
 }
 
-.text-start, .bi-exclamation-circle {
-    font-size: 14px !important;
-    color: #454545 !important;
+.text-start,
+.bi-exclamation-circle {
+  font-size: 14px !important;
+  color: #454545 !important;
 }
 
 a {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
