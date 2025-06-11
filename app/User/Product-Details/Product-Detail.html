@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết sự kiện</title>
+    <link rel="stylesheet" href="Product-Detail.css" />
+    <link rel="stylesheet" href="/Ticket_Concert FE/app/globals.css" />
+  </head>
+  <body>
+    <div style="zoom: 0.9">
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      /><link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      /><link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/flag-icon-css/css/flag-icon.min.css"
+      />
+      <nav
+        class="navbar navbar-expand-lg navbar-light pt-3 pb-3 position-sticky top-0 z-3"
+      >
+        <div
+          class="container d-flex align-items-center justify-content-between"
+        >
+          <a href="/"><img alt="Logo" src="/logo_User.png" /></a>
+          <div class="form-group">
+            <div
+              class="input-icon position-relative d-flex dqshek align-items-center p-1"
+            >
+              <input
+                class="form-control w-100"
+                placeholder="Bạn tìm gì hôm nay?"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <div
+              class="d-flex align-items-center justify-content-between gap-3 w-100"
+            >
+              <a
+                class="btn btn-outline-light ps-4 pe-4 pt-2 pb-2 rounded-5"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="/Organizer"
+                style="width: 150px"
+                >Tạo sự kiện</a
+              ><a
+                class="d-flex align-items-center text-decoration-none text-white gap-2"
+                href="/User/My-Infor"
+                ><i class="bi bi-ticket-detailed fs-3"></i> Vé đã mua</a
+              >
+              <div class="dropdown mt-0">
+                <button class="btn text-white dropdown-toggle" type="button">
+                  <a
+                    class="text-decoration-none text-white"
+                    href="/Authen/Login"
+                    ><img
+                      alt=""
+                      src="null"
+                      style="
+                        border-radius: 50%;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        object-fit: cover;
+                      "
+                    />
+                    Tài khoản</a
+                  >
+                </button>
+                <ul class="dropdown-menu mt-0">
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="/User/My-Infor"
+                      ><i class="bi bi-ticket-detailed"></i> Vé đã mua</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      target="blank"
+                      href="/Organizer/Organi-Event/my-event"
+                      ><i class="bi bi-calendar-event"></i> Sự kiện của tôi</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="/User/My-Infor"
+                      ><i class="bi bi-person-circle"></i> Trang cá nhân</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <button class="dropdown-item text-danger">
+                      <i class="bi bi-box-arrow-right"></i> Đăng xuất
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="dropdown ms-2 w-0">
+              <button class="btn text-white dropdown-toggle" type="button">
+                <span class="flag-icon flag-icon-vn"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item d-flex align-items-center gap-2"
+                    href="#"
+                    ><span class="flag-icon flag-icon-vn"></span> Tiếng Việt</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item d-flex align-items-center gap-2"
+                    href="#"
+                    ><span class="flag-icon flag-icon-gb"></span> English</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="text-white" style="background-color: rgb(0, 0, 0)">
+        <div
+          class="container d-flex justify-content-between align-items-center ps-3 pe-3"
+          style="height: 70px"
+        >
+          <div class="d-flex gap-4">
+            <a class="text-white text-decoration-none" href="/User/Product-List"
+              >Concert</a
+            ><a
+              class="text-white text-decoration-none"
+              href="/User/Product-List"
+              >Lễ kỉ niệm</a
+            ><a
+              class="text-white text-decoration-none"
+              href="/User/Product-List"
+              >Nhạc sống</a
+            ><a
+              class="text-white text-decoration-none"
+              href="/User/Product-List"
+              >Đêm nhạc hội</a
+            ><a
+              class="text-white text-decoration-none"
+              href="/User/Product-List"
+              >Bolero</a
+            ><a
+              class="text-white text-decoration-none"
+              href="/User/Product-List"
+              >Sân khấu &amp; Nghệ thuật</a
+            ><a
+              class="text-white text-decoration-none"
+              href="/User/Product-List"
+              >Khác</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="box title">
+        <div id="banner">
+          <div class="container justify-content-center d-flex p-0">
+            <div class="text-wrapper h-100" style="flex: 1 1 0%">
+              <div id="circle1" class="circle"></div>
+              <div id="circle2" class="circle"></div>
+              <svg
+                class="vertical-dashed"
+                xmlns="http://www.w3.org/2000/svg"
+                width="4"
+                height="100%"
+                fill="none"
+              >
+                <path
+                  stroke="#27272A"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-dasharray="4 10"
+                  d="M2 0v1000"
+                ></path></svg
+              ><svg
+                class="vertical-dashed"
+                xmlns="http://www.w3.org/2000/svg"
+                width="4"
+                height="100%"
+                fill="none"
+              >
+                <path
+                  stroke="#27272A"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-dasharray="4 10"
+                  d="M2 0v1000"
+                ></path>
+              </svg>
+              <div>
+                <p id="title" class="fw-bold fs-4">
+                  <strong
+                    >Love Letter With Faye Peraya 1st Fan Meeting In Ho Chi
+                    Minh</strong
+                  >
+                </p>
+                <div id="venue" class="">
+                  <div class="d-flex gap-2 align-items-center">
+                    <i class="bi text bi-geo-alt-fill"></i
+                    ><span
+                      class="venue-text fs-6 fw-bold"
+                      style="color: rgb(45, 194, 117)"
+                      >C30 Hòa Bình - 141 Bắc Hải, Phường 14, Quận 10, Thành Phố
+                      Hồ Chí Minh</span
+                    >
+                  </div>
+                </div>
+                <div class="ps-4">
+                  <span
+                    class="fw-bold"
+                    style="font-size: 14px; color: rgb(196, 196, 207)"
+                  ></span>
+                </div>
+              </div>
+              <div class="price">
+                <div class="d-flex align-items-baseline mt-3 mb-2 mb-1">
+                  <span class="me-2 text-white fs-5 fw-bold">Giá từ</span
+                  ><span
+                    id="price-value"
+                    class="fw-bold me-2"
+                    style="font-size: 25px; color: rgb(45, 194, 117)"
+                    >1.500.000 đ</span
+                  >
+                </div>
+                <a
+                  class="w-100 d-flex justify-content-center text-decoration-none"
+                  href="#InfoVe"
+                  ><button type="button" class="btn btn-success w-100">
+                    Chọn lịch diễn
+                  </button></a
+                >
+              </div>
+            </div>
+            <div class="img-wrapper">
+              <img
+                alt="Banner cover"
+                src="https://res.cloudinary.com/desqamcqs/image/upload/v1749115935/kgwqbrtavnih2utekuwj.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="event-info">
+        <div class="container d-flex justify-content-between gap-4 p-0">
+          <div
+            class="left d-flex flex-column gap-4"
+            style="width: 80%; border-radius: 10px"
+          >
+            <div
+              class="p-3 bg-white rounded-3"
+              style="box-shadow: rgba(255, 255, 255, 0.5) 2px 2px 10px"
+            >
+              <h2 class="">Giới thiệu</h2>
+              <div class="event-details">
+                <div>
+                  <div style="text-align: center">
+                    <strong
+                      id="docs-internal-guid-93ae0558-7fff-acff-c0d8-f95b5ba15005"
+                      >Love Letter with Faye Peraya 1st Fan Meeting in Ho Chi
+                      Minh</strong
+                    >
+                  </div>
+                  <div>
+                    <div
+                      class="xdj266r x11i5rnm xat24cr x1mh8g0r x1vvkbs x126k92a"
+                    >
+                      <div>
+                        Theo yêu cầu đông đảo từ các bạn, chúng mình sẽ mang
+                        Faye Peraya chính hiệu đến ngay nơi bạn ở
+                      </div>
+                    </div>
+                    <div
+                      class="x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s x126k92a"
+                    >
+                      <div>
+                        Việt Nam ơi, chuẩn bị gặp gỡ nữ hoàng Faye Peraya tại
+                        buổi fanmeeting đầu tiên của cô ấy tại đất nước mình
+                        nhé!
+                      </div>
+                    </div>
+                    <div
+                      class="x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s x126k92a"
+                    >
+                      <div>
+                        LOVE LETTER WITH FAYE PERAYA 1st FAN MEETING IN HO CHI
+                        MINH
+                      </div>
+                    </div>
+                    <div
+                      class="x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s x126k92a"
+                    >
+                      <div>28 THÁNG 6, 2025 | THỨ BẢY | 6 GIỜ CHIỀU</div>
+                      <div>C30 Hòa Bình</div>
+                    </div>
+                    <div
+                      class="x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s x126k92a"
+                    >
+                      <div>
+                        Vé được mở bán từ 12 giờ trưa ngày 7 tháng 6 trên
+                        Ticketbox
+                      </div>
+                    </div>
+                    <div
+                      class="x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s x126k92a"
+                    >
+                      <div>
+                        Hãy xem các poster bên dưới để biết chi tiết đầy đủ.
+                      </div>
+                    </div>
+                    <div
+                      class="x11i5rnm xat24cr x1mh8g0r x1vvkbs xtlvy1s x126k92a"
+                    >
+                      <div>
+                        Đây là sự kiện đầu tiên của Faye tại Việt Nam, vậy nên
+                        hãy cùng nhau biến nó thành một khoảnh khắc thật đặc
+                        biệt mà cô ấy sẽ nhớ mãi nhé.
+                      </div>
+                      <div>&nbsp;</div>
+                      <div>
+                        <img
+                          style="
+                            display: block;
+                            margin-left: auto;
+                            margin-right: auto;
+                          "
+                          src="https://salt.tkbcdn.com/ts/ds/49/71/1e/92b4521696d12d5d2a335e41dd0a77ae.jpg"
+                          alt=""
+                          width="100%"
+                          height="100%"
+                          border="0"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          src="https://salt.tkbcdn.com/ts/ds/52/88/f6/815731bb03840c72066d7fd34851b9d6.jpg"
+                          alt=""
+                          width="100%"
+                          height="100%"
+                          border="0"
+                        />
+                      </div>
+                      <div>
+                        <p dir="ltr"><strong>English Below</strong></p>
+                        <p dir="ltr">Điều khoản và điều kiện:</p>
+                        <p dir="ltr">
+                          * Vé concert chỉ có thể được mua thông qua các nền
+                          tảng của Ticketbox (trang web và ứng dụng Ticketbox)
+                        </p>
+                        <p dir="ltr">
+                          * 1 (MỘT) vé chỉ có hiệu lực cho 1 (MỘT) người sở hữu
+                          vé cho 1 (MỘT) lần vào bên trong khu vực diễn ra sự
+                          kiện.
+                        </p>
+                        <p dir="ltr">* Mỗi tài khoản giới hạn tối đa 4 vé.</p>
+                        <p dir="ltr">
+                          * Vé KHÔNG được hoàn trả, đổi ngày hoặc chỉnh sửa
+                          trong bất kỳ trường hợp nào.
+                        </p>
+                        <p dir="ltr">
+                          * Vui lòng không mua vé từ bất kỳ nguồn nào khác để
+                          tránh trường hợp vé giả hoặc lừa đảo, BTC không chịu
+                          trách nhiệm giải quyết các trường hợp này.
+                        </p>
+                        <p dir="ltr">
+                          * Khán giả có trách nhiệm tự bảo quản vé của mình. BTC
+                          từ chối giải quyết các trường hợp có nhiều hơn 1 người
+                          check-in cùng 1 mã vé. Theo quy định, BTC sẽ chấp nhận
+                          cho phép người sở hữu vé chính chủ theo thông tin khai
+                          báo trên Ticketbox được tham dự sự kiện.
+                        </p>
+                        <p dir="ltr">
+                          * Người tham dự sự kiện vui lòng xuất trình email nhận
+                          vé hoặc đơn hàng có trên app Ticketbox để checkin đổi
+                          Benefits và nhận Vòng Tay trước khi vào hội trường
+                          diễn ra sự kiện.
+                        </p>
+                        <p dir="ltr">
+                          * Đảm bảo có Vòng Tay và xuất trình được vé điện tử
+                          khi được yêu cầu bất cứ lúc nào trước khi vào hội
+                          trường diễn ra sự kiện.
+                        </p>
+                        <p dir="ltr">
+                          * Ban quản lý và nhân viên có quyền từ chối cho vào
+                          và/hoặc mời ra ngoài đối với bất kỳ cá nhân nào, vào
+                          bất kỳ lúc nào nếu người đó vi phạm bất kỳ Điều khoản
+                          &amp; Quy định nào của ban tổ chức.
+                        </p>
+                        <p dir="ltr">
+                          * Trong mọi trường hợp, quyết định của Ban tổ chức là
+                          quyết định cuối cùng.
+                        </p>
+                        <p dir="ltr"><strong>&nbsp;</strong></p>
+                        <p dir="ltr">
+                          <strong><em>Terms and Conditions:</em></strong>
+                        </p>
+                        <p dir="ltr">
+                          <em
+                            >* Concert tickets can only be purchased through
+                            Ticketbox platforms (Ticketbox website and app).</em
+                          >
+                        </p>
+                        <p dir="ltr">
+                          <em
+                            >* 1 (ONE) ticket is valid for 1 (ONE) person for 1
+                            (ONE) entry into the event area.</em
+                          >
+                        </p>
+                        <p dir="ltr">
+                          <em
+                            >* Each account is limited to a maximum of 4
+                            tickets.</em
+                          >
+                        </p>
+                        <p dir="ltr">
+                          <em
+                            >* Tickets are NON-REFUNDABLE, NON-EXCHANGEABLE, and
+                            NON-EDITABLE under any circumstances.</em
+                          >
+                        </p>
+                        <p dir="ltr">
+                          <em
+                            >* Please do not purchase tickets from any other
+                            sources to avoid the risk of counterfeit or
+                            fraudulent tickets. The Organizer is not responsible
+                            for resolving such cases.</em
+                          >
+                        </p>
+                        <p dir="ltr">
+                          <em
+                            >* Ticket purchasers are responsible for keeping
+                            their e-tickets safe. The Organizer will not resolve
+                            cases where more than 1 person checks in with 1
+                            e-ticket. According to regulations, the Organizer
+                            will only allow the rightful owner of the e-ticket,
+                            as per the information declared on Ticketbox, to
+                            attend the event.</em
+                          >
+                        </p>
+                        <p dir="ltr">
+                          <em
+                            >* Audiences please present the ticket confirmation
+                            email or order on the Ticketbox app for check-in to
+                            exchange for Benefits and receive Wristbands before
+                            entering the event venue.</em
+                          >
+                        </p>
+                        <p dir="ltr">
+                          <em
+                            >* Please ensure you have your Wristband and be able
+                            to present your e-ticket upon request at any
+                            time.</em
+                          >
+                        </p>
+                        <p dir="ltr">
+                          <em
+                            >* Management and staff reserve the right to refuse
+                            entry and/or remove any individual, at any time, if
+                            they violate any terms and conditions of the
+                            Organizer.</em
+                          >
+                        </p>
+                        <p dir="ltr">
+                          <em
+                            >* In all cases, the Organizer's decision is
+                            final.</em
+                          >
+                        </p>
+                        <p dir="ltr">
+                          <em
+                            ><img
+                              src='"F:\10122166_LuongCongHieu_DA3\Ticket_Concert FE\public\6b94c53be5ed9e093d423e160ef61668.jpg"'
+                              alt=""
+                          /></em>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="View-Details d-flex align-items-center gap-2 justify-content-center p-2 mt-3 border-0 w-100"
+                style="cursor: pointer"
+              >
+                <i class="bi bi-chevron-down"></i><span>Xem chi tiết</span>
+              </div>
+            </div>
+            <div id="InfoVe" class="ticket-info text-white bg-dark">
+              <h2
+                class="text-white p-3 m-0"
+                style="border-bottom: 1px solid rgb(0, 0, 0)"
+              >
+                Thông tin vé
+              </h2>
+              <div class="text-white rounded">
+                <div
+                  class="d-flex p-3 justify-content-between align-items-center"
+                  style="cursor: pointer"
+                >
+                  <div class="p-0">
+                    <div class="d-flex fs-6 gap-2 fw-bold align-items-center">
+                      <span class="fs-6 text bi bi-chevron-right">
+                        Suất diễn :
+                      </span>
+                      <p class="m-0 fs-6">08:00 AM - 10:00 PM, 28/6/2025</p>
+                    </div>
+                  </div>
+                  <a
+                    class="text-decoration-none text-white"
+                    href="/User/Book-Tickets?id_detail=6f62ed88-8b6e-458b-94c6-978d82e0b2fa"
+                    ><button type="button" class="btn btn-success">
+                      Mua vé ngay
+                    </button></a
+                  >
+                </div>
+                <div class="collapse-content"></div>
+              </div>
+            </div>
+            <div class="bg-white rounded-3 ps-3 pe-3">
+              <h5
+                class="pt-3 pb-3 fs-6 fw-semibold"
+                style="border-bottom: 1px solid rgb(235, 235, 240)"
+              >
+                Ban tổ chức
+              </h5>
+              <div class="d-flex pt-2 pb-3 gap-4">
+                <div class="img col-md-2" style="height: 170px">
+                  <img
+                    class="rounded-3 w-100 h-100"
+                    alt=""
+                    src="https://res.cloudinary.com/desqamcqs/image/upload/v1749116203/wybijtw5r7slhwo8dkct.jpg"
+                    style="object-fit: cover"
+                  />
+                </div>
+                <div class="" style="flex: 1 1 auto">
+                  <p class="m-0 fs-5 fw-semibold">S9T Concert</p>
+                  <p>Concert and Fan Meeting Promoter</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right" style="width: 20%; height: 600px">
+            <img class="w-100 h-100 rounded-3" alt="" src="/imgzalopay.png" />
+          </div>
+        </div>
+      </div>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      /><link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      /><link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/flag-icon-css/css/flag-icon.min.css"
+      />
+      <footer class="footer">
+        <div class="footer-top d-flex justify-content-between">
+          <div class="footer-column">
+            <h5>Hotline</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-telephone-fill me-2"></i>
+              <div>
+                <p class="mb-0">Thứ 2 - Thứ 6 (8:30 - 18:30)</p>
+                <a href="tel:19006408">1900.6408</a>
+              </div>
+            </div>
+            <h5>Email</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-envelope-fill me-2"></i
+              ><a href="mailto:support@ticketbox.vn">support@ticketbox.vn</a>
+            </div>
+            <h5>Văn phòng</h5>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-geo-alt-fill me-2"></i>
+              <p class="mb-0">
+                52 Út Tịch, Phường 4, Quận Tân Bình, TP. Hồ Chí Minh
+              </p>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h5>Dành cho Khách hàng</h5>
+            <ul>
+              <li><a href="#">Điều khoản sử dụng cho khách hàng</a></li>
+              <li><a href="#">Điều khoản sử dụng cho ban tổ chức</a></li>
+            </ul>
+            <h5>Đăng ký nhận email</h5>
+            <form class="input-group">
+              <span class="input-group-text"
+                ><i class="bi bi-envelope-fill text-success"></i></span
+              ><input
+                placeholder="Your Email"
+                class="border-start-0"
+                type="email"
+              /><button class="input-group-text border-start-0">
+                <i class="bi bi-caret-right-fill text-secondary"></i>
+              </button>
+            </form>
+          </div>
+          <div class="footer-column">
+            <h5>Về công ty chúng tôi</h5>
+            <ul>
+              <li><a href="#">Quy chế hoạt động</a></li>
+              <li><a href="#">Chính sách bảo mật thông tin</a></li>
+              <li><a href="#">Cơ chế giải quyết tranh chấp/ khiếu nại</a></li>
+              <li><a href="#">Chính sách đổi trả và kiểm hàng</a></li>
+            </ul>
+            <ul class="social-media d-flex">
+              <li>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bi bi-tiktok"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="footer-bottom d-flex justify-content-between align-items-center pt-3 mt-3"
+        >
+          <div class="footer-app-links">
+            <a href="#"
+              ><img
+                alt="Google Play"
+                width="150"
+                height="50"
+                src="/google-play.png" /></a
+            ><a href="#"
+              ><img
+                alt="App Store"
+                width="150"
+                height="50"
+                src="/app-store.png"
+            /></a>
+          </div>
+          <div class="footer-company-info">
+            <p>Công ty TNHH Ticketbox</p>
+            <p>Đại diện theo pháp luật: Trần Ngọc Thái Sơn</p>
+            <p>
+              Địa chỉ: Tầng 12, Tòa nhà Viettel, 285 Cách Mạng Tháng Tám, Quận
+              10, TP. Hồ Chí Minh
+            </p>
+            <p>Giấy chứng nhận đăng ký doanh nghiệp số: 0313605444</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

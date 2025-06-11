@@ -1,0 +1,260 @@
+body {
+  font-size: 16px;
+  color: #303233;
+  font-family: "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  margin: 8px;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  z-index: 110;
+  justify-content: center;
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.08);
+  flex: 0 0 40px;
+}
+#header,
+.loader,
+html {
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 960px;
+  }
+}
+@media (min-width: 768px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 720px;
+  }
+}
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+    max-width: 540px;
+  }
+}
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#header .header-wrapper .logo-wrap {
+  display: flex;
+  padding: 12px 0;
+}
+
+.momo-logo {
+  background-color: #a50064;
+  width: 46px;
+  height: 46px;
+  border-radius: 5px;
+  justify-content: center;
+  flex: 0 0 46px;
+}
+.loader,
+.momo-logo {
+  align-items: center;
+  display: flex;
+}
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+.imgLogo {
+  width: 35px;
+  height: 35px;
+  color: #fff;
+}
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+#header .header-wrapper .logo-wrap span {
+  padding-top: 12px;
+}
+.logo-title {
+  font-weight: 400;
+}
+.btn-momo,
+.receipt > span,
+span {
+  font-weight: 500;
+}
+.time-expire-text,
+span {
+  font-size: 16px;
+}
+
+.payment-container {
+  min-height: calc(100vh - var(--footer-header-height, 17vh));
+  background-image: url(/v2/gateway/images/patterns-top.svg),
+    url(/v2/gateway/images/patterns-right-top.svg),
+    url(/v2/gateway/images/patterns-right-bottom.svg),
+    linear-gradient(to top, #fff, #fffbfe);
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat-x;
+  background-position: left top, right top, right bottom;
+}
+
+#footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  line-height: 1.5;
+  border-top: 1px solid #ebebeb;
+}
+#footer,
+.text-gray-dark.hover-black {
+  color: #727272;
+}
+#footer,
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: #f9f9f9;
+}
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+#footer .footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#footer .footer-wrapper .footer-wrap-version {
+  flex: 0 0 70%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#footer .footer-wrapper .footer-wrap-version span {
+  display: block;
+  font-weight: 400;
+  padding-top: 12px;
+  line-height: 18px;
+  font-size: 14px;
+}
+.btn-momo,
+.receipt > span,
+span {
+  font-weight: 500;
+}
+.time-expire-text,
+span {
+  font-size: 16px;
+}
+
+#footer .footer-wrapper .footer-wrap-info {
+  padding-top: 15px;
+  font-weight: 400;
+  flex: 0 0 30%;
+}
+
+#footer .footer-wrapper .footer-wrap-info span {
+  padding-bottom: 11px;
+  display: block;
+  font-weight: 400;
+  color: #727272;
+  font-size: 14px;
+}
+
+#footer .footer-wrapper .footer-wrap-info a {
+  padding-bottom: 11px;
+  color: #096dd9;
+  font-size: 14px;
+  line-height: 18px;
+  display: block;
+}
+.momo-phone-icon {
+  background: url(/v2/gateway/images/icons/phone.svg) no-repeat;
+  padding-left: 24px;
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+#footer .footer-wrapper .footer-wrap-info a {
+  padding-bottom: 11px;
+  color: #096dd9;
+  font-size: 14px;
+  line-height: 18px;
+  display: block;
+}
+.momo-mail-icon {
+  background: url(/v2/gateway/images/icons/mail.svg) no-repeat;
+  padding-left: 24px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
